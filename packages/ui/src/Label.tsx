@@ -54,7 +54,7 @@ export const AppLabel = styled(
           fontSize: '$larger',
         },
         extraLarge: {
-          fontSize: '$10',
+          fontSize: '$extraLarge',
         },
       },
     } as const,
