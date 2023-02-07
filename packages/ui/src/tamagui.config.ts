@@ -1,54 +1,40 @@
-import { createTamagui } from 'tamagui'
+import { createFont, createTamagui } from 'tamagui'
 import { createInterFont } from '@tamagui/font-inter'
 import { shorthands } from '@tamagui/shorthands'
 import { themes, tokens } from '@tamagui/theme-base'
 import { createMedia } from '@tamagui/react-native-media-driver'
 
 import { animations } from './animations'
+const fontSizes = {
+  mini: 6,
+  smallest: 8,
+  smaller: 10,
+  small: 12,
+  regular: 14,
+  large: 16,
+  larger: 20,
+  extraLarge: 45,
+  //without adding atleast one entry with a number format, it gives a typescript error
+  '1': 6,
+}
 
-const headingFont = createInterFont({
-  size: {
-    6: 15,
-  },
-  transform: {
-    6: 'uppercase',
-    7: 'none',
-  },
-  weight: {
-    6: '400',
-    7: '700',
-  },
-  color: {
-    6: '$colorFocus',
-    7: '$color',
-  },
-  letterSpacing: {
-    5: 2,
-    6: 1,
-    7: 0,
-    8: -1,
-    9: -2,
-    10: -3,
-    12: -4,
-    14: -5,
-    15: -6,
-  },
-  face: {
-    700: { normal: 'InterBold' },
-  },
-})
-
-const bodyFont = createInterFont(
-  {
-    face: {
-      700: { normal: 'InterBold' },
+const createAppFont = (familyName: string) => {
+  return createInterFont(
+    {
+      family: familyName,
+      size: fontSizes,
     },
-  },
-  {
-    sizeSize: (size) => Math.round(size * 1.1),
-    sizeLineHeight: (size) => Math.round(size * 1.1 + (size > 20 ? 10 : 10)),
-  }
-)
+    {
+      sizeSize: (size) => Math.round(size * 1.1),
+      sizeLineHeight: (size) => Math.round(size * 1.1 + (size > 20 ? 10 : 10)),
+    }
+  )
+}
+// const headingFont = createInterFont({})
+const semiBold = createAppFont('SourceSansPro-SemiBold')
+const regular = createAppFont('SourceSansPro-Regular')
+const medium = createAppFont('SourceSansPro-SemiBold')
+const light = createAppFont('SourceSansPro-Regular')
 
 export const config = createTamagui({
   animations,
@@ -56,8 +42,13 @@ export const config = createTamagui({
   themeClassNameOnRoot: true,
   shorthands,
   fonts: {
-    heading: headingFont,
-    body: bodyFont,
+    heading: semiBold,
+    body: regular,
+    // regular: bodyFont,
+    semiBold,
+    regular,
+    medium,
+    light,
   },
   themes,
   tokens,

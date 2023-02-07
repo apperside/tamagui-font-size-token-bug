@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'Barlow-Medium';
+    src: url('/fonts/Barlow-Medium.woff2') format('woff2'),
+        url('/fonts/Barlow-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Barlow-SemiBold';
+    src: url('/fonts/Barlow-SemiBold.woff2') format('woff2'),
+        url('/fonts/Barlow-SemiBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Barlow-Regular';
+    src: url('/fonts/Barlow-Regular.woff2') format('woff2'),
+        url('/fonts/Barlow-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Barlow-Light';
+    src: url('/fonts/Barlow-Light.woff2') format('woff2'),
+        url('/fonts/Barlow-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'SourceSansPro-Bold';
+    src: url('/fonts/SourceSansPro-Bold.woff2') format('woff2'),
+        url('/fonts/SourceSansPro-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+@font-face {
+    font-family: 'SourceSansPro-Regular';
+    src: url('/fonts/SourceSansPro-Regular.woff2') format('woff2'),
+        url('/fonts/SourceSansPro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+  
+@font-face {
+    font-family: 'SourceSansPro-SemiBold';
+    src: url('/fonts/SourceSansPro-SemiBold.woff2') format('woff2'),
+        url('/fonts/SourceSansPro-SemiBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
